@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./funcoes.js"></script>
+    <title>Gerador de Recibo</title>
+  </head>
+  <body>
+    
+    <div class="dados">
+      <fieldset> <legend><b>Gerador de Recibo</b></legend>
+      <div class="inputBox">
+        <input
+          type="text"
+          name="emitente" 
+          id="emitente"
+          class="inputUser"
+          required
+        />
+        <label for="emitente" class="labelInput">Emitente</label>
+      </div>
+      <br /><br />
+      <div class="inputBox">
+        <input type="number" name="cnpj" id="cnpj" class="inputUser" required />
+        <label for="cnpj" class="labelInput">CNPJ</label>
+      </div>
+      <br /><br />
+      <div class="inputBox">
+        <input type="text" name="nome" id="nome" class="inputUser" required />
+        <label for="nome" class="labelInput">Cliente</label>
+      </div>
+      <br /><br />
+      <div class="inputBox">
+        <input
+          type="number"
+          name="valor"
+          id="valor"
+          class="inputUser"
+          required
+        />
+        <label for="valor" class="labelInput">Preço</label>
+      </div>
+      <br /><br />
+      <div class="inputBox">
+        <input
+          type="text"
+          name="servico"
+          id="servico"
+          class="inputUser"
+          required
+        />
+        <label for="servico" class="labelInput">Tipo de Serviço Prestado</label>
+      </div>
+      <br /><br />
+      <div id="data-emissao" class="inputBox">
+        <label for="data">Data do Serviço</label>
+        <input type="date" name="data" id="data" class="dataEmissao" />
+      </div>
+      <br /><br />
+      <button id="enviar" onclick="gerarRecibo()"><b>Gerar Recibo</b></button>
+    </div>
+  </fieldset>
+
+    <!--Documento para impressão-->
+
+    <!--
+
+    <div class="print">
+      <h1>Recibo - <span id="recibo_emitente"></span></h1>
+      <p>CNPJ: <span id="recibo_cnpj"></span></p>
+
+      <p>
+        Recebemos de <span id="recibo_nome"></span> a quantia de R$
+        <span id="recibo_valor"></span>, referente ao serviço de
+        <span id="recibo_servico"></span>
+      </p>
+      <p></p>
+      <p>Data: <span id="recibo_data"></span></p>
+      <br /><br />
+      <div class="assinatura">Assinatura</div>
+    </div>
+
+  -->
+  </body>
+</html>
